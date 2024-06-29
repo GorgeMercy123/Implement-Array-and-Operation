@@ -1,0 +1,36 @@
+Module ArrayOperationExample
+    Sub Main()
+        ' Declare an array of integers
+        Dim numbers() As Integer = {1, 2, 3, 4, 5}
+
+        ' Display the original array
+        Console.WriteLine("Original Array:")
+        For Each num In numbers
+            Console.Write(num & " ")
+        Next
+        Console.WriteLine()
+
+        ' Perform an operation on each element of the array (e.g., double each element)
+        For i = 0 To numbers.Length - 1
+            numbers(i) *= 2
+        Next
+
+        ' Display the updated array after the operation
+        Console.WriteLine("Array after Doubling each Element:")
+        For Each num In numbers
+            Console.Write(num & " ")
+        Next
+        Console.WriteLine()
+
+        ' Calculate the sum of all elements in the array
+        Dim sum As Integer = 0
+        For Each num In numbers
+            sum += num
+        Next
+
+        ' Display the sum of all elements in the array
+        Console.WriteLine("Sum of Array Elements: " & sum)
+
+        Console.ReadLine()
+    End Sub
+End Module
